@@ -14,7 +14,6 @@ def makePgNum(num):
     else:
         return num + 9 * (num - 1)
 
-
 def makeUrl(search, start_pg, end_pg):
     if start_pg == end_pg:
         start_page = makePgNum(start_pg)
@@ -31,14 +30,11 @@ def makeUrl(search, start_pg, end_pg):
         print("생성url: ", urls)
         return urls
 
-
-
 def news_attrs_crawler(articles, attrs):
     attrs_content = []
     for i in articles:
         attrs_content.append(i.attrs[attrs])
     return attrs_content
-
 
 # ConnectionError방지
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/98.0.4758.102"}
